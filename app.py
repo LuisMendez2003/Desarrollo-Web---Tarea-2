@@ -2,10 +2,15 @@ from flask import Flask
 from utils.db import db
 from services.predio import predio
 from flask_sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
 from config import DATABASE_CONNECTION
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_CONNECTION
+
+#Initialize SQLA bf M
+#db = SQLAlchemy(app)
+#ma = Marshmallow(app)
 
 #SQLAlchemy(app)
 db.init_app(app)

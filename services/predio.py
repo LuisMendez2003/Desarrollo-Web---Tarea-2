@@ -25,8 +25,8 @@ def getPredios():
 @predio.route('/predios/<int:id>', methods = ['GET'])
 def getPredio(id):
     result = {}
-    predios = Predio.query.get(id) #"Select from Contact"
-    result["data"] = predios
+    predio = Predio.query.get(id) #"Select from Contact"
+    result["data"] = predio
     result["status_cod"] = 200 #Status_code se envia como resultado del query para FrontEnd
     result["status_msg"] = "Contacts were recovery succesfully..."
     return jsonify(result), 200
